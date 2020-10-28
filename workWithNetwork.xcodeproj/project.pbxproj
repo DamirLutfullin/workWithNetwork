@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19AC0689254915AB00097E94 /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AC0688254915AB00097E94 /* firstViewController.swift */; };
 		19ACA3A6254861CF00723AE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA3A5254861CF00723AE3 /* AppDelegate.swift */; };
 		19ACA3A8254861CF00723AE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA3A7254861CF00723AE3 /* SceneDelegate.swift */; };
 		19ACA3AA254861CF00723AE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA3A9254861CF00723AE3 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19AC0688254915AB00097E94 /* firstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstViewController.swift; sourceTree = "<group>"; };
 		19ACA3A2254861CF00723AE3 /* workWithNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workWithNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19ACA3A5254861CF00723AE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19ACA3A7254861CF00723AE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				19ACA3A5254861CF00723AE3 /* AppDelegate.swift */,
 				19ACA3A7254861CF00723AE3 /* SceneDelegate.swift */,
 				19ACA3A9254861CF00723AE3 /* ViewController.swift */,
+				19AC0688254915AB00097E94 /* firstViewController.swift */,
 				19ACA3AB254861CF00723AE3 /* Main.storyboard */,
 				19ACA3AE254861D200723AE3 /* Assets.xcassets */,
 				19ACA3B0254861D200723AE3 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 				19ACA3AA254861CF00723AE3 /* ViewController.swift in Sources */,
 				19ACA3A6254861CF00723AE3 /* AppDelegate.swift in Sources */,
 				19ACA3A8254861CF00723AE3 /* SceneDelegate.swift in Sources */,
+				19AC0689254915AB00097E94 /* firstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
