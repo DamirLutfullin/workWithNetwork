@@ -43,7 +43,7 @@
                                 </constraints>
                                 <state key="normal" title="Post request"/>
                                 <connections>
-                                    <action selector="postRequest:" destination="kOU-CE-SEg" eventType="touchUpInside" id="IIY-Ei-bCZ"/>
+                                    <action selector="postRequest:" destination="kOU-CE-SEg" eventType="touchUpInside" id="EZr-MO-ahL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,7 +109,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SUi-QT-18i" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9gm-Wi-WNw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
