@@ -11,7 +11,7 @@
         <!--Networking-->
         <scene sceneID="0T4-8q-JRT">
             <objects>
-                <viewController id="kOU-CE-SEg" sceneMemberID="viewController">
+                <viewController id="kOU-CE-SEg" customClass="FirstViewController" customModule="workWithNetwork" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2tG-jv-50T">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,14 +31,20 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UqT-ew-rOC" secondAttribute="height" multiplier="48:11" id="1ay-ia-dBA"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Get request"/>
+                                <connections>
+                                    <action selector="getRequest:" destination="kOU-CE-SEg" eventType="touchUpInside" id="TaU-st-1eO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnb-si-3pE">
                                 <rect key="frame" x="16" y="192" width="288" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dnb-si-3pE" secondAttribute="height" multiplier="48:11" id="Nyh-rs-Jfa"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Post request"/>
+                                <connections>
+                                    <action selector="postRequest:" destination="kOU-CE-SEg" eventType="touchUpInside" id="IIY-Ei-bCZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CpG-M8-sH7"/>
@@ -103,7 +109,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SUi-QT-18i" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9gm-Wi-WNw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
