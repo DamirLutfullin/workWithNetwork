@@ -7,25 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19AC0689254915AB00097E94 /* FrstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AC0688254915AB00097E94 /* FrstViewController.swift */; };
+		19AC0689254915AB00097E94 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AC0688254915AB00097E94 /* FirstScreenViewController.swift */; };
 		19ACA3A6254861CF00723AE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA3A5254861CF00723AE3 /* AppDelegate.swift */; };
 		19ACA3A8254861CF00723AE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA3A7254861CF00723AE3 /* SceneDelegate.swift */; };
-		19ACA3AA254861CF00723AE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA3A9254861CF00723AE3 /* ViewController.swift */; };
+		19ACA3AA254861CF00723AE3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA3A9254861CF00723AE3 /* ImageViewController.swift */; };
 		19ACA3AD254861CF00723AE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19ACA3AB254861CF00723AE3 /* Main.storyboard */; };
 		19ACA3AF254861D200723AE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ACA3AE254861D200723AE3 /* Assets.xcassets */; };
 		19ACA3B2254861D200723AE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19ACA3B0254861D200723AE3 /* LaunchScreen.storyboard */; };
+		19BE6143254AFFDD00C2C2E7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BE6142254AFFDD00C2C2E7 /* TableViewCell.swift */; };
+		19F95D93254A861000528038 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F95D92254A861000528038 /* CoursesViewController.swift */; };
+		19F95D96254A879E00528038 /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F95D95254A879E00528038 /* CourseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		19AC0688254915AB00097E94 /* FrstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrstViewController.swift; sourceTree = "<group>"; };
+		19AC0688254915AB00097E94 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
 		19ACA3A2254861CF00723AE3 /* workWithNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workWithNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19ACA3A5254861CF00723AE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19ACA3A7254861CF00723AE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		19ACA3A9254861CF00723AE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		19ACA3A9254861CF00723AE3 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		19ACA3AC254861CF00723AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19ACA3AE254861D200723AE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19ACA3B1254861D200723AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19ACA3B3254861D200723AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19BE6142254AFFDD00C2C2E7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		19F95D92254A861000528038 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		19F95D95254A879E00528038 /* CourseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +66,15 @@
 			children = (
 				19ACA3A5254861CF00723AE3 /* AppDelegate.swift */,
 				19ACA3A7254861CF00723AE3 /* SceneDelegate.swift */,
-				19ACA3A9254861CF00723AE3 /* ViewController.swift */,
-				19AC0688254915AB00097E94 /* FrstViewController.swift */,
+				19ACA3A9254861CF00723AE3 /* ImageViewController.swift */,
+				19AC0688254915AB00097E94 /* FirstScreenViewController.swift */,
+				19F95D92254A861000528038 /* CoursesViewController.swift */,
+				19BE6142254AFFDD00C2C2E7 /* TableViewCell.swift */,
+				19F95D95254A879E00528038 /* CourseModel.swift */,
 				19ACA3AB254861CF00723AE3 /* Main.storyboard */,
-				19ACA3AE254861D200723AE3 /* Assets.xcassets */,
 				19ACA3B0254861D200723AE3 /* LaunchScreen.storyboard */,
 				19ACA3B3254861D200723AE3 /* Info.plist */,
+				19ACA3AE254861D200723AE3 /* Assets.xcassets */,
 			);
 			path = workWithNetwork;
 			sourceTree = "<group>";
@@ -140,10 +149,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19ACA3AA254861CF00723AE3 /* ViewController.swift in Sources */,
+				19F95D96254A879E00528038 /* CourseModel.swift in Sources */,
+				19ACA3AA254861CF00723AE3 /* ImageViewController.swift in Sources */,
 				19ACA3A6254861CF00723AE3 /* AppDelegate.swift in Sources */,
 				19ACA3A8254861CF00723AE3 /* SceneDelegate.swift in Sources */,
-				19AC0689254915AB00097E94 /* FrstViewController.swift in Sources */,
+				19AC0689254915AB00097E94 /* FirstScreenViewController.swift in Sources */,
+				19BE6143254AFFDD00C2C2E7 /* TableViewCell.swift in Sources */,
+				19F95D93254A861000528038 /* CoursesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.damirLutfullin.workWithNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,7 +331,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.damirLutfullin.workWithNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

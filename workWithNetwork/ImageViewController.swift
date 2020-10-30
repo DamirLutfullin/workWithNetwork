@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ImageViewController: UIViewController {
 
     @IBOutlet var imageForDownload: UIImageView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!

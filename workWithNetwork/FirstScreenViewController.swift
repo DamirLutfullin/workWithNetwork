@@ -13,7 +13,7 @@ struct Answer {
     var body : String
 }
 
-class FirstViewController: UIViewController {
+class FirstScreenViewController: UIViewController {
     
     @IBAction func getRequest(_ sender: UIButton) {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts/1") else { return }
@@ -46,17 +46,21 @@ class FirstViewController: UIViewController {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
         let dict = ["course" : "Networking", "lessons" : "30"]
         var request = URLRequest(url: url)
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: dict, options: []) else { return }
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-type")
-        guard let httpBody = try? JSONSerialization.data(withJSONObject: dict, options: []) else { return }
-        request.httpBody = httpBody
         
         let session = URLSession.shared
-        session.dataTask(with: request) { (data, response, error) in
+        session.uploadTask(with: request, from: httpBody) { (data, response, error) in
             if let data = data {
                 let json = try! JSONSerialization.jsonObject(with: data, options: [])
                 print(json)
             }
         }.resume()
     }
+    
+    @IBAction func fetchCourses(_ sender: UIButton) {
+        
+    }
+    
 }
