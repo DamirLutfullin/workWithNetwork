@@ -22,6 +22,7 @@ struct Answer {
     var body : String
 }
 
+private let urlForUploadImage = "https://api.imgur.com/3/image"
 class CollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
@@ -44,6 +45,7 @@ class CollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         let userAction = UserActions.allCases[indexPath.row]
         switch userAction {
         case .getImage:
@@ -54,8 +56,9 @@ class CollectionViewController: UICollectionViewController {
             NetworkManager.postRequest()
         case .getCourses: performSegue(withIdentifier: userAction.rawValue, sender: nil)
         case .uploadImage:
-            break
+            NetworkManager.uploadImage(url: urlForUploadImage)
         }
+        
     }
 }
 

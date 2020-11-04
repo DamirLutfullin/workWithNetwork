@@ -5,7 +5,7 @@
 //  Created by Damir Lutfullin on 04.11.2020.
 //
 
-import Foundation
+import UIKit
 
 class NetworkManager {
     
@@ -86,5 +86,33 @@ class NetworkManager {
         }.resume()
     }
     
-    
+    static func uploadImage(url: String) {
+        guard
+            let image = UIImage(named: "1"),
+            let imageProperties = ImageProperties(image: image, key: "image"),
+            let url = URL(string: url)
+        else { return }
+        
+        let httpHeaders = ["Authorization" : "Client-ID 3c6530e32aa4243"]
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = httpHeaders
+        request.httpBody = imageProperties.data
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let response = response {
+                print(response)
+            }
+            
+            if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(json)
+                } catch let error {
+                    print(error)
+                }
+            }
+        }.resume()
+    }
 }
