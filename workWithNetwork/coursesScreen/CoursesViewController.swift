@@ -17,29 +17,10 @@ class CoursesViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        fetchData()
-    }
-    
-    private func fetchData() {
-        //        let jsonUrlString = "https://swiftbook.ru//wp-content/uploads/api/api_course"
-        let jsonUrlString = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
-        //        let jsonUrlString = "https://swiftbook.ru//wp-content/uploads/api/api_website_description"
-        //        let jsonUrlString = "https://swiftbook.ru//wp-content/uploads/api/api_missing_or_wrong_fields"
-        
-        guard let url = URL(string: jsonUrlString) else { return }
-        URLSession.shared.dataTask(with: url) { [self] (data, _, _) in
-            guard let data = data else { return }
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                self.courses = try decoder.decode([Course].self, from: data)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            } catch let error {
-                print(error, error.localizedDescription)
-            }
-        }.resume()
+        NetworkManager.getCourses { [weak self] (courses) in
+            self?.courses = courses
+            self?.tableView.reloadData()
+        }
     }
     
     private func configureCell(cell: TableViewCell, for indexPath: IndexPath) {

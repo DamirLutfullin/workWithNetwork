@@ -1,21 +1,15 @@
 //
-//  firstViewController.swift
+//  NetworkManager.swift
 //  workWithNetwork
 //
-//  Created by Damir Lutfullin on 28.10.2020.
+//  Created by Damir Lutfullin on 04.11.2020.
 //
 
-import UIKit
-struct Answer {
-    var id : Int
-    var userId : Int
-    var title: String
-    var body : String
-}
+import Foundation
 
-class FirstScreenViewController: UIViewController {
+class NetworkManager {
     
-    @IBAction func getRequest(_ sender: UIButton) {
+   static func getRequest() {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts/1") else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
@@ -42,7 +36,7 @@ class FirstScreenViewController: UIViewController {
         }.resume()
     }
     
-    @IBAction func postRequest(_ sender: UIButton) {
+   static func postRequest() {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
         let dict = ["course" : "Networking", "lessons" : "30"]
         var request = URLRequest(url: url)
@@ -59,8 +53,38 @@ class FirstScreenViewController: UIViewController {
         }.resume()
     }
     
-    @IBAction func fetchCourses(_ sender: UIButton) {
+    static func downloadImage(completion: @escaping (Data) ->()) {
+        guard let url = URL(string:"https://upload.wikimedia.org/wikipedia/commons/4/42/Blue_sky%2C_white-gray_clouds.JPG") else { return }
         
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else { return}
+            DispatchQueue.main.async {
+                completion(data)
+            }
+        }.resume()
     }
+    
+    static func getCourses(completion: @escaping ([Course]) -> ()) {
+        //        let jsonUrlString = "https://swiftbook.ru//wp-content/uploads/api/api_course"
+        let jsonUrlString = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
+        //        let jsonUrlString = "https://swiftbook.ru//wp-content/uploads/api/api_website_description"
+        //        let jsonUrlString = "https://swiftbook.ru//wp-content/uploads/api/api_missing_or_wrong_fields"
+        
+        guard let url = URL(string: jsonUrlString) else { return }
+        URLSession.shared.dataTask(with: url) { (data, _, _) in
+            guard let data = data else { return }
+            do {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let courses = try decoder.decode([Course].self, from: data)
+                DispatchQueue.main.async {
+                    completion(courses)
+                }
+            } catch let error {
+                print(error, error.localizedDescription)
+            }
+        }.resume()
+    }
+    
     
 }

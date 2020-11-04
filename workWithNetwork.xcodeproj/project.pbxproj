@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19AC0689254915AB00097E94 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AC0688254915AB00097E94 /* FirstScreenViewController.swift */; };
+		191190E22552D4FD005AEDDF /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191190E12552D4FD005AEDDF /* CollectionViewCell.swift */; };
+		191190E52552E3E1005AEDDF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191190E42552E3E1005AEDDF /* NetworkManager.swift */; };
+		1973EF492551E08100F7D3B4 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1973EF482551E08100F7D3B4 /* CollectionViewController.swift */; };
 		19ACA3A6254861CF00723AE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA3A5254861CF00723AE3 /* AppDelegate.swift */; };
 		19ACA3A8254861CF00723AE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA3A7254861CF00723AE3 /* SceneDelegate.swift */; };
 		19ACA3AA254861CF00723AE3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ACA3A9254861CF00723AE3 /* ImageViewController.swift */; };
@@ -20,7 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		19AC0688254915AB00097E94 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
+		191190E12552D4FD005AEDDF /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		191190E42552E3E1005AEDDF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1973EF482551E08100F7D3B4 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		19ACA3A2254861CF00723AE3 /* workWithNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workWithNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19ACA3A5254861CF00723AE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19ACA3A7254861CF00723AE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		191190E72552E47B005AEDDF /* app */ = {
+			isa = PBXGroup;
+			children = (
+				19ACA3A5254861CF00723AE3 /* AppDelegate.swift */,
+				19ACA3A7254861CF00723AE3 /* SceneDelegate.swift */,
+				19ACA3B3254861D200723AE3 /* Info.plist */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		191190E82552E489005AEDDF /* supportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				19ACA3AE254861D200723AE3 /* Assets.xcassets */,
+			);
+			path = supportingFiles;
+			sourceTree = "<group>";
+		};
+		194805232552E89E00C63EA3 /* coursesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				19F95D92254A861000528038 /* CoursesViewController.swift */,
+				19F95D95254A879E00528038 /* CourseModel.swift */,
+				19BE6142254AFFDD00C2C2E7 /* TableViewCell.swift */,
+			);
+			path = coursesScreen;
+			sourceTree = "<group>";
+		};
+		194805242552E8D200C63EA3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				19ACA3B0254861D200723AE3 /* LaunchScreen.storyboard */,
+				19ACA3AB254861CF00723AE3 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		194805252552E8F700C63EA3 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1973EF482551E08100F7D3B4 /* CollectionViewController.swift */,
+				191190E12552D4FD005AEDDF /* CollectionViewCell.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		194805262552E91400C63EA3 /* ImageScreen */ = {
+			isa = PBXGroup;
+			children = (
+				19ACA3A9254861CF00723AE3 /* ImageViewController.swift */,
+			);
+			path = ImageScreen;
+			sourceTree = "<group>";
+		};
+		194805272552E92100C63EA3 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				191190E42552E3E1005AEDDF /* NetworkManager.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
 		19ACA399254861CF00723AE3 = {
 			isa = PBXGroup;
 			children = (
@@ -64,17 +130,13 @@
 		19ACA3A4254861CF00723AE3 /* workWithNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				19ACA3A5254861CF00723AE3 /* AppDelegate.swift */,
-				19ACA3A7254861CF00723AE3 /* SceneDelegate.swift */,
-				19ACA3A9254861CF00723AE3 /* ImageViewController.swift */,
-				19AC0688254915AB00097E94 /* FirstScreenViewController.swift */,
-				19F95D92254A861000528038 /* CoursesViewController.swift */,
-				19BE6142254AFFDD00C2C2E7 /* TableViewCell.swift */,
-				19F95D95254A879E00528038 /* CourseModel.swift */,
-				19ACA3AB254861CF00723AE3 /* Main.storyboard */,
-				19ACA3B0254861D200723AE3 /* LaunchScreen.storyboard */,
-				19ACA3B3254861D200723AE3 /* Info.plist */,
-				19ACA3AE254861D200723AE3 /* Assets.xcassets */,
+				191190E72552E47B005AEDDF /* app */,
+				194805252552E8F700C63EA3 /* MainScreen */,
+				194805262552E91400C63EA3 /* ImageScreen */,
+				194805232552E89E00C63EA3 /* coursesScreen */,
+				194805272552E92100C63EA3 /* services */,
+				194805242552E8D200C63EA3 /* Storyboards */,
+				191190E82552E489005AEDDF /* supportingFiles */,
 			);
 			path = workWithNetwork;
 			sourceTree = "<group>";
@@ -151,9 +213,11 @@
 			files = (
 				19F95D96254A879E00528038 /* CourseModel.swift in Sources */,
 				19ACA3AA254861CF00723AE3 /* ImageViewController.swift in Sources */,
+				191190E52552E3E1005AEDDF /* NetworkManager.swift in Sources */,
+				191190E22552D4FD005AEDDF /* CollectionViewCell.swift in Sources */,
 				19ACA3A6254861CF00723AE3 /* AppDelegate.swift in Sources */,
 				19ACA3A8254861CF00723AE3 /* SceneDelegate.swift in Sources */,
-				19AC0689254915AB00097E94 /* FirstScreenViewController.swift in Sources */,
+				1973EF492551E08100F7D3B4 /* CollectionViewController.swift in Sources */,
 				19BE6143254AFFDD00C2C2E7 /* TableViewCell.swift in Sources */,
 				19F95D93254A861000528038 /* CoursesViewController.swift in Sources */,
 			);
@@ -304,7 +368,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TQU76263MV;
-				INFOPLIST_FILE = workWithNetwork/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/workWithNetwork/app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,7 +387,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TQU76263MV;
-				INFOPLIST_FILE = workWithNetwork/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/workWithNetwork/app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
