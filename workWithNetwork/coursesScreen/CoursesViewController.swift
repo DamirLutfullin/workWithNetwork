@@ -27,7 +27,10 @@ class CoursesViewController: UIViewController {
     }
     
     func fetchCoursesWithAlamofire() {
-        AlamofireNetworkManager.getCourses(url: "https://swiftbook.ru//wp-content/uploads/api/api_courses")
+        AlamofireNetworkManager.getCourses(url: "https://swiftbook.ru//wp-content/uploads/api/api_courses") { [weak self] (courses) in
+            self?.courses = courses
+            self?.tableView.reloadData()
+        }
     }
     
     private func configureCell(cell: TableViewCell, for indexPath: IndexPath) {
