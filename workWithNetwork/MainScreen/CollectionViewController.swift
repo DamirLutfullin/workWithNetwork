@@ -12,7 +12,9 @@ enum UserActions: String, CaseIterable {
     case getRequest
     case postRequest
     case getCourses
+    case getCoursesWithAlamofire
     case uploadImage
+    case downloadFile
 }
 
 struct Answer {
@@ -57,8 +59,29 @@ class CollectionViewController: UICollectionViewController {
         case .getCourses: performSegue(withIdentifier: userAction.rawValue, sender: nil)
         case .uploadImage:
             NetworkManager.uploadImage(url: urlForUploadImage)
+        case .downloadFile:
+            break
+        case .getCoursesWithAlamofire:
+            performSegue(withIdentifier: userAction.rawValue, sender: nil)
         }
+    }
+    
+    //MARK: Navigarion
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            let coursesVC = segue.destination as? CoursesViewController,
+            let identifier = segue.identifier,
+            let userAction = UserActions(rawValue: identifier)
+        else { return }
         
+        switch userAction {
+        case .getCourses:
+            coursesVC.fetchCoursesWithURLSession()
+        case .getCoursesWithAlamofire:
+            coursesVC.fetchCoursesWithAlamofire()
+        default:
+            break
+        }
     }
 }
 

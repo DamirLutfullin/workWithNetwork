@@ -17,10 +17,17 @@ class CoursesViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func fetchCoursesWithURLSession() {
         NetworkManager.getCourses { [weak self] (courses) in
             self?.courses = courses
             self?.tableView.reloadData()
         }
+    }
+    
+    func fetchCoursesWithAlamofire() {
+        AlamofireNetworkManager.getCourses(url: "https://swiftbook.ru//wp-content/uploads/api/api_courses")
     }
     
     private func configureCell(cell: TableViewCell, for indexPath: IndexPath) {
